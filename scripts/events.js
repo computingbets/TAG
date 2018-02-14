@@ -1,5 +1,7 @@
 'use strict';
 
+const ui = require('./ui');
+
 var one = Math.floor(Math.random() * 101;
 var two = Math.floor(Math.random() * 101;
 var three = Math.floor(Math.random() * 101;
