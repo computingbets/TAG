@@ -1,36 +1,94 @@
 body {
-  background-color: #0335ff;
+  background-image: url(https://lh4.googleusercontent.com/-jGyO1aEKJRM/WLYmCsIbbCI/AAAAAAAAAA8/qTlDbD9KQLQsntVBFp0x9DHNyJGd2tx7gCLIBGAYYCw/w160-h160-k-no/);
+
 }
 .container {
   border-color: #000000;
   border-width: medium;
   border-style: solid;
-  width: 350px;
-  height: 375px;
+  width: 650px;
+  height: 570px;
+  background-color: #1f682c;
 
 }
 
 .shuffle {
-  clear: both;
+  background-color: #3e6199;
+  height: 33px;
+  border-radius: 25px;
+  border-color: #3e6199;
 }
 
 .sort {
-  clear: both;
-
+  background-color: #3e6199;
+  height: 33px;
+  border-radius: 25px;
+  border-color: #3e6199;
 }
+
 .rows {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   justify-content: space-between;
-  width: 350px;
-  height: 355px;
+  width: 650px;
+  height: 545px;
   margin-top: 3px;
   margin-bottom: 3px;
 }
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
-  height: 2px;
-  width: 50px;
-  background-color: #000000;
+  height: 35px;
+  width: 180px;
+  background-image: url(https://media.giphy.com/media/citBl9yPwnUOs/giphy.gif);
+  background-size: contain;
+
+}
+
+.swapped {
+  background-color: red;
+}
+
+.zeroToTen {
+  height: 8px;
+}
+
+.tenToTwenty {
+  height: 16px
+}
+
+.twentyToThirty {
+  height: 24px;
+}
+
+.thirtyToForty {
+  height: 32px;
+}
+
+.fortyToFifty {
+  height: 36px;
+}
+
+.fiftyToSixty {
+  height: 40px;
+}
+
+.sixtyToSeventy {
+  height: 44px;
+}
+
+.seventyToEighty {
+  height: 48px;
+}
+
+.eightyToNinety {
+  height: 52px;
+}
+
+.ninetyToHundo {
+  height: 56px;
+}
+
+.oneContain {
+  float: right;
 }

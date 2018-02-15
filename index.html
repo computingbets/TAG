@@ -7,8 +7,8 @@
     <link rel="icon"
       type="image/png"
       href="https://lh4.googleusercontent.com/-jGyO1aEKJRM/WLYmCsIbbCI/AAAAAAAAAA8/qTlDbD9KQLQsntVBFp0x9DHNyJGd2tx7gCLIBGAYYCw/w160-h160-k-no/">
-      <!-- <script src="jquery-3.3.1.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="index.css">.
+    <!-- CDN requirement of jQuery -->
     <script
         src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -16,50 +16,15 @@
     </script>
     <script type="text/javascript" src="scripts/events.js"></script>
     <script type="text/javascript" src="scripts/ui.js"></script>
-    <script type="text/javascript">
-    const onShuffle = () => {
-      var one = Math.floor(Math.random() * 101);
-      var two = Math.floor(Math.random() * 101);
-      var three = Math.floor(Math.random() * 101);
-      var four = Math.floor(Math.random() * 101);
-      var five = Math.floor(Math.random() * 101);
-      var six = Math.floor(Math.random() * 101);
-      var seven = Math.floor(Math.random() * 101);
-      var eight = Math.floor(Math.random() * 101);
-      var nine = Math.floor(Math.random() * 101);
-      var ten = Math.floor(Math.random() * 101);
-
-      console.log("shuffling");
-      var arr = [];
-      arr.push(one,two,three,four,five,six,seven,eight,nine,ten)
-      return arr
-    }.done(ui.shuffleSuccess);
-
-    const onSort = () => {
-      console.log("sorting");
-      var arr = onShuffle();
-      for (var i = 0; i < arr.length; i++) {
-        if (arr[i] > arr[i + 1]) {
-          var a = arr[i + 1]
-          var b = arr[i]
-          arr[i] = b
-          arr[i + 1] = a
-        }
-      }
-      return arr;
-    }.done(ui.sortSuccess);
-
-     $('.sort').on('click', onSort);
-     $('.shuffle').on('click', onShuffle);
-    </script>
   </head>
   <body>
     <div class="container">
       <div class="rows">
-
+        
         <div class="one">
 
         </div>
+
         <div class="two">
 
         </div>
