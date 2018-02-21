@@ -1,17 +1,18 @@
 'use strict';
 
-const shuffleSuccess (arr) => {
-$('.one').html(arr[0]);
-$('.two').html(arr[1]);
-$('.three').html(arr[2]);
-$('.four').html(arr[3]);
-$('.five').html(arr[4]);
-$('.six').html(arr[5]);
-$('.seven').html(arr[6]);
-$('.eight').html(arr[7]);
-$('.nine').html(arr[8]);
-$('.ten').html(arr[9]);
-}.then(function(){
+const shuffleSuccess = (arr) => {
+$('.one').text(arr[0]);
+$('.two').text(arr[1]);
+$('.three').text(arr[2]);
+$('.four').text(arr[3]);
+$('.five').text(arr[4]);
+$('.six').text(arr[5]);
+$('.seven').text(arr[6]);
+$('.eight').text(arr[7]);
+$('.nine').text(arr[8]);
+$('.ten').text(arr[9]);
+}
+var shuffleClass = function(){
   if ($('.one').html() < 10) {
     $('.one').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -33,9 +34,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.one').addClass('ninetyToHundo')
   } else {
-    $('.one').html(arr[0])
+    console.log("NaN1");
   }
-}).then(function(){
+};
+ var shuffleClass2 = function(){
   if ($('.two').html() < 10) {
     $('.two').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -57,9 +59,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.two').addClass('ninetyToHundo')
   } else {
-    $('.two').html(arr[1])
+    console.log("NaN2");
   }
-}).then(function(){
+};
+ var shuffleClass3 = function(){
   if ($('.three').html() < 10) {
     $('.three').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -81,9 +84,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.three').addClass('ninetyToHundo')
   } else {
-    $('.three').html(arr[2])
+    console.log("NaN3");
   }
-}).then(function(){
+};
+var shuffleClass4 = function(){
   if ($('.four').html() < 10) {
     $('.four').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -105,9 +109,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.four').addClass('ninetyToHundo')
   } else {
-    $('.four').html(arr[3])
+    console.log("NaN4");
   }
-}).then(function(){
+};
+var shuffleClass5 = function(){
   if ($('.five').html() < 10) {
     $('.five').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -129,9 +134,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.five').addClass('ninetyToHundo')
   } else {
-    $('.five').html(arr[4])
+    console.log("NaN5");
   }
-}).then(function(){
+};
+var shuffleClass6 = function(){
   if ($('.six').html() < 10) {
     $('.six').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -153,9 +159,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.six').addClass('ninetyToHundo')
   } else {
-    $('.six').html(arr[5])
+    console.log("NaN6");
   }
-}).then(function(){
+};
+var shuffleClass7 = function(){
   if ($('.seven').html() < 10) {
     $('.seven').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -177,9 +184,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.seven').addClass('ninetyToHundo')
   } else {
-    $('.seven').html(arr[6])
+    console.log("NaN7");
   }
-}).then(function(){
+};
+var shuffleClass8 = function(){
   if ($('.eight').html() < 10) {
     $('.eight').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -201,9 +209,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.eight').addClass('ninetyToHundo')
   } else {
-    $('.eight').html(arr[7])
+    console.log("NaN8");
   }
-}).then(function(){
+};
+var shuffleClass9 = function(){
   if ($('.nine').html() < 10) {
     $('.nine').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -225,9 +234,10 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.nine').addClass('ninetyToHundo')
   } else {
-    $('.nine').html(arr[8])
+    console.log("NaN9");
   }
-}).done(function(){
+};
+var shuffleClass10 = function(){
   if ($('.ten').html() < 10) {
     $('.ten').addClass('zeroToTen')
   } else if ($('.one').html() >10 && $('.one').html() < 20) {
@@ -249,40 +259,40 @@ $('.ten').html(arr[9]);
   } else if ($('.one').html() >90 && $('.one').html() < 100) {
     $('.ten').addClass('ninetyToHundo')
   } else {
-    $('.ten').html(arr[9])
+    console.log("NaN10");
   }
-});
-
-const sortSuccess (arr) => {
-  if ($('.one').html() > $('.two').html()) {
-    $('.one').html($('.two').text())
-  } else if (('.two').html() > $('.three').html()) {
-    $('.two').html($('.three').text())
-  } else if (('.three').html() > $('.four').html()) {
-    $('.three').html($('.four').text())
-  } else if (('.four').html() > $('.five').html()) {
-    $('.four').html($('.five').text())
-  } else if (('.five').html() > $('.six').html()) {
-    $('.five').html($('.six').text())
-  } else if (('.six').html() > $('.seven').html()) {
-    $('.six').html($('.seven').text())
-  } else if (('.seven').html() > $('.eight').html()) {
-    $('.seven').html($('.eight').text())
-  } else if (('.eight').html() > $('.nine').html()) {
-    $('.eight').html($('.nine').text())
-  } else if (('.nine').html() > $('.ten').html()) {
-    $('.nine').html($('.ten').text())
-  } else {
-    alert("sorted!");
-  };
-
-  // $('.one').html(arr[0]);
-  // $('.two').html(arr[1]);
-  // $('.three').html(arr[2]);
-  // $('.four').html(arr[3]);
-  // $('.five').html(arr[4]);
-  // $('.six').html(arr[six  $('.seven').html(arr[6]);
-  // $('.eight').html(arr[7]);
-  // $('.nine').html(arr[8]);
-  // $('.ten').html(arr[9]);
 };
+//
+// const sortSuccess (arr) => {
+//   if ($('.one').html() > $('.two').html()) {
+//     $('.one').html($('.two').text())
+//   } else if (('.two').html() > $('.three').html()) {
+//     $('.two').html($('.three').text())
+//   } else if (('.three').html() > $('.four').html()) {
+//     $('.three').html($('.four').text())
+//   } else if (('.four').html() > $('.five').html()) {
+//     $('.four').html($('.five').text())
+//   } else if (('.five').html() > $('.six').html()) {
+//     $('.five').html($('.six').text())
+//   } else if (('.six').html() > $('.seven').html()) {
+//     $('.six').html($('.seven').text())
+//   } else if (('.seven').html() > $('.eight').html()) {
+//     $('.seven').html($('.eight').text())
+//   } else if (('.eight').html() > $('.nine').html()) {
+//     $('.eight').html($('.nine').text())
+//   } else if (('.nine').html() > $('.ten').html()) {
+//     $('.nine').html($('.ten').text())
+//   } else {
+//     alert("sorted!");
+//   };
+//
+//   // $('.one').html(arr[0]);
+//   // $('.two').html(arr[1]);
+//   // $('.three').html(arr[2]);
+//   // $('.four').html(arr[3]);
+//   // $('.five').html(arr[4]);
+//   // $('.six').html(arr[six  $('.seven').html(arr[6]);
+//   // $('.eight').html(arr[7]);
+//   // $('.nine').html(arr[8]);
+//   // $('.ten').html(arr[9]);
+// };
