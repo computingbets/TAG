@@ -1,5 +1,5 @@
 'use strict';
-
+//random num generator returning array to shuffleSuccess and bubStep
 const onShuffle = () => {
   var one = Math.floor(Math.random() * 101);
   var two = Math.floor(Math.random() * 101);
@@ -14,35 +14,40 @@ const onShuffle = () => {
 
   var arr = [];
   arr.push(one,two,three,four,five,six,seven,eight,nine,ten)
-  console.log(arr);
   return arr
 };
 
-var i = 0;
-var j = onShuffle().length -1;
 
-const bubbleStep = (arr,i,j,swapped) => {
-  var arr = onShuffle();
-  if (arr[i] > arr[i+1]) {
-    var x = arr[i];
-    var y = arr[i+1];
-    arr[i] = y;
-    arr[i+1] = x;
-    swapped = true;
-  }
-  i++;
-  if (i===j) {
-    j--;
-  }
-  return arr;
+// bubStep (as in BubbleStep and EDM) do while loop returning function to pass
+//on next click with counter to 1 for one step of bubblesorting
+const bubStep = (arr) => {
+    var swapped;
+    do {
+        swapped = 0;
+        for (var i=0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i+1]) {
+                var b = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = b;
+                swapped = +1;
+            }
+        }
+    } while (swapped == 1);
+    return bubStep(arr);
 };
 
- //$('.sort').on('click', bubbleStep).done(sortSuccess);
+//document ready fixes inactive javascript scripts bug
+ $(document).ready(function() {
+ $('.sort').on('click', function(){
+   sortSuccess();
+ })
+});
+// ui file has seperate ui success functions due to .then not executing
  $(document).ready(function() {
 $('.shuffle').on('click', function(){
-   console.log("hello");
    let arr = onShuffle();
    shuffleSuccess(arr);
+   //bubStep(arr);
    shuffleClass();
    shuffleClass2();
    shuffleClass3();
@@ -55,3 +60,26 @@ $('.shuffle').on('click', function(){
    shuffleClass10();
  })
  });
+
+
+ // previous algorith that seperates nested loops
+
+ // var i = 0;
+ // var j = onShuffle().length -1;
+
+ // (arr,i,j,swapped) => {
+ //   console.log("bubStep");
+ //   var arr = onShuffle();
+ //   if (arr[i] > arr[i+1]) {
+ //     var x = arr[i];
+ //     var y = arr[i+1];
+ //     arr[i] = y;
+ //     arr[i+1] = x;
+ //     swapped = true;
+ //   }
+ //   i++;
+ //   if (i===j) {
+ //     j--;
+ //   }
+ //   return arr;
+ // };

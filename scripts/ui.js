@@ -1,5 +1,5 @@
 'use strict';
-
+//on success of shufflebutton, ui updates
 const shuffleSuccess = (arr) => {
 $('.one').html(arr[0]).css("color", "white");
 $('.two').html(arr[1]).css("color", "white");
@@ -12,6 +12,9 @@ $('.eight').html(arr[7]).css("color", "white");
 $('.nine').html(arr[8]).css("color", "white");
 $('.ten').html(arr[9]).css("color", "white");
 }
+
+// jQuery .then was not working do to Promises not being returned so short
+// solution to seperate functions
 var shuffleClass = function(){
   if ($('.one').html() < 10) {
     $('.one').addClass('zeroToTen')
@@ -262,37 +265,29 @@ var shuffleClass10 = function(){
     console.log("NaN10");
   }
 };
-//
-// const sortSuccess (arr) => {
-//   if ($('.one').html() > $('.two').html()) {
-//     $('.one').html($('.two').text())
-//   } else if (('.two').html() > $('.three').html()) {
-//     $('.two').html($('.three').text())
-//   } else if (('.three').html() > $('.four').html()) {
-//     $('.three').html($('.four').text())
-//   } else if (('.four').html() > $('.five').html()) {
-//     $('.four').html($('.five').text())
-//   } else if (('.five').html() > $('.six').html()) {
-//     $('.five').html($('.six').text())
-//   } else if (('.six').html() > $('.seven').html()) {
-//     $('.six').html($('.seven').text())
-//   } else if (('.seven').html() > $('.eight').html()) {
-//     $('.seven').html($('.eight').text())
-//   } else if (('.eight').html() > $('.nine').html()) {
-//     $('.eight').html($('.nine').text())
-//   } else if (('.nine').html() > $('.ten').html()) {
-//     $('.nine').html($('.ten').text())
-//   } else {
-//     alert("sorted!");
-//   };
-//
-//   // $('.one').html(arr[0]);
-//   // $('.two').html(arr[1]);
-//   // $('.three').html(arr[2]);
-//   // $('.four').html(arr[3]);
-//   // $('.five').html(arr[4]);
-//   // $('.six').html(arr[six  $('.seven').html(arr[6]);
-//   // $('.eight').html(arr[7]);
-//   // $('.nine').html(arr[8]);
-//   // $('.ten').html(arr[9]);
-// };
+
+//sortSuccess receives array from bubStep and parses logic
+var sortSuccess = (arr) => {
+  console.log("sortSuccess");
+  if ($('.one').text() > $('.two').text()) {
+    $('.one').html($('.two').text())
+  } else if ($('.two').text() > $('.three').text()) {
+    $('.two').html($('.three').text())
+  } else if ($('.three').text() > $('.four').text()) {
+    $('.three').html($('.four').text())
+  } else if ($('.four').text() > $('.five').text()) {
+    $('.four').html($('.five').text())
+  } else if ($('.five').text() > $('.six').text()) {
+    $('.five').html($('.six').text())
+  } else if ($('.six').text() > $('.seven').text()) {
+    $('.six').html($('.seven').text())
+  } else if ($('.seven').text() > $('.eight').text()) {
+    $('.seven').html($('.eight').text())
+  } else if ($('.eight').text() > $('.nine').text()) {
+    $('.eight').html($('.nine').text())
+  } else if ($('.nine').text() > $('.ten').text()) {
+    $('.nine').html($('.ten').text())
+  } else {
+    alert("sorted!");
+  }
+};
