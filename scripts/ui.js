@@ -1,16 +1,16 @@
 'use strict';
 
 const shuffleSuccess = (arr) => {
-$('.one').text(arr[0]);
-$('.two').text(arr[1]);
-$('.three').text(arr[2]);
-$('.four').text(arr[3]);
-$('.five').text(arr[4]);
-$('.six').text(arr[5]);
-$('.seven').text(arr[6]);
-$('.eight').text(arr[7]);
-$('.nine').text(arr[8]);
-$('.ten').text(arr[9]);
+$('.one').html(arr[0]).css("color", "white");
+$('.two').html(arr[1]).css("color", "white");
+$('.three').html(arr[2]).css("color", "white");
+$('.four').html(arr[3]).css("color", "white");
+$('.five').html(arr[4]).css("color", "white");
+$('.six').html(arr[5]).css("color", "white");
+$('.seven').html(arr[6]).css("color", "white");
+$('.eight').html(arr[7]).css("color", "white");
+$('.nine').html(arr[8]).css("color", "white");
+$('.ten').html(arr[9]).css("color", "white");
 }
 var shuffleClass = function(){
   if ($('.one').html() < 10) {
